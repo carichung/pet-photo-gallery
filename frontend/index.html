@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Pet Photo Gallery</h1>
@@ -10,23 +13,11 @@
         <input type="text" name="caption" placeholder="Enter a caption" required>
         <button type="submit">Upload</button>
     </form>
-    <h2>Gallery</h2>
+    <h2></h2>
     <div id="gallery">
         <!-- Photos will be dynamically loaded here -->
     </div>
-    <script>
-        // Fetch and display photos from the backend
-        fetch('/photos')
-            .then(response => response.json())
-            .then(photos => {
-                const gallery = document.getElementById('gallery');
-                photos.forEach(photo => {
-                    const img = document.createElement('img');
-                    img.src = photo.url;
-                    img.alt = photo.caption;
-                    gallery.appendChild(img);
-                });
-            });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+

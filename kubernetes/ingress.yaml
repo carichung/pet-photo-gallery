@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pet-photo-gallery-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  tls:
+  - hosts:
+    - pet.carichung.com
+    secretName: pet-photo-gallery-tls
+  rules:
+  - host: pet.carichung.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: pet-photo-gallery
+            port:
+              number: 80
+

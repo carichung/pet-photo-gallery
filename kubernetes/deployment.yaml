@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pet-photo-gallery-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pet-photo-gallery-backend
+  template:
+    metadata:
+      labels:
+        app: pet-photo-gallery-backend
+    spec:
+      containers:
+      - name: backend
+        image: your-dockerhub-username/pet-photo-gallery-backend:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: MYSQL_HOST
+          value: "mysql-service"  # Replace with your MySQL service name
+        - name: MYSQL_USER
+          value: "root"
+        - name: MYSQL_PASSWORD
+          value: "password"
+        - name: MYSQL_DATABASE
+          value: "pet_photo_gallery"

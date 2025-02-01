@@ -1,0 +1,76 @@
+/* styles.css */
+body {
+    font-family: 'Gaegu', cursive; /* Cute Korean font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Move content to the left */
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('https://marketplace.canva.com/EAFJhI0EBag/1/0/1600w/canva-blue-cute-dog-quotes-desktop-wallpaper-g8TNhcn4QCQ.jpg');
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    color: #333; /* Text color */
+}
+
+h1 {
+    color: #003568; /* Navy color for the heading */
+    font-family: verdana;
+    margin: 20px 0 10px 40px; /* Move to the left and add some spacing */
+    font-size: 4rem; /* Larger font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+form {
+    background: #ffffff; /* Solid white background */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 0 0 20px 40px; /* Move to the left and add spacing */
+    width: 100%; /* Full width */
+    max-width: 650px; /* Limit maximum width for better readability */
+}
+
+input[type="file"], input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded corners for inputs */
+    font-family: 'verdana'; /* Cute font for inputs */
+}
+
+button {
+    background-color: #ff6f61; /* Cute pink color for the button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px; /* Rounded corners for the button */
+    cursor: pointer;
+    font-family: 'verdana'; /* Cute font for the button */
+    font-size: 1.2rem; /* Slightly larger font size */
+}
+
+button:hover {
+    background-color: #ff4a3d; /* Darker pink on hover */
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 20px 40px; /* Move to the left and add spacing */
+    background: #ffffff; /* Solid white background */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    width: 40%; /* Full width */
+    max-width: 1200px; /* Limit maximum width for better readability */
+}
+
+#gallery img {
+    max-width: 200px;
+    border-radius: 8px; /* Rounded corners for images */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for images */
+}
